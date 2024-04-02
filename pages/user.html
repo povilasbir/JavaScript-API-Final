@@ -4,13 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Info</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-
-    <script src="../scripts/user_page.js"></script>
+    <header>
+        <img src="../banner.png" alt="Banner Image">
+    </header>
+    <main>
+        <div id="user-card-wrap">
+            <h2 class="user-info-title">User Information</h2>
+            <h3 class="username" id="username">Username: Loading...</h3>
+            <h4 class="secondary-info" id="full-name">Full Name: Loading...</h4>
+            <h4 class="secondary-info" id="email">Email: Loading...</h4>
+            <h5 class="address-title">Address Information:</h5>
+            <div class="address-wrap">
+                <span class="address-secondary" id="street">
+                    Street: Loading...
+                </span>
+                <span class="address-secondary" id="suite">
+                    Suite: Loading...
+                </span>
+                <span class="address-secondary" id="city">
+                    City: Loading...
+                </span>
+                <span class="address-secondary" id="zipcode">
+                    Zip Code: Loading...
+                </span>
+                <div class="geo-data">
+                    <span class="lat">
+                        Latitude: Loading...
+                    </span>
+                    <span class="lng">
+                        Longitude: Loading...
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../scripts/user_page.js" type="module"></script>
 </body>
 
 </html>

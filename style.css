@@ -23,22 +23,13 @@ main #users-wrap {
   border-radius: 10px;
   border: solid 2px #292929;
 }
-main #users-wrap .title-line {
-  font-weight: 800;
-  text-align: center;
-}
-main #users-wrap .title-line span {
-  color: hsl(0, 0%, 90%);
-}
 main #users-wrap .table-line {
-  width: 100%;
   display: flex;
   text-decoration: none;
   color: black;
 }
 main #users-wrap .table-line .user-list-span {
-  display: block;
-  width: 33%;
+  min-width: 33%;
   padding: 5px 20px 5px 20px;
 }
 main #users-wrap .table-line:nth-child(odd) {
@@ -50,7 +41,36 @@ main #users-wrap .table-line:nth-child(even) {
 main #users-wrap .table-line:first-child {
   border-radius: 7px 7px 0 0;
   background-color: hsl(0, 0%, 30%);
+  color: hsl(0, 0%, 90%);
+  font-weight: 800;
+  text-align: center;
 }
 main #users-wrap .table-line:last-child {
   border-radius: 0 0 7px 7px;
+}
+main #user-card-wrap {
+  min-width: 40%;
+  background-color: gray;
+  border: solid 2px #292929;
+  border-radius: 10px;
+  padding: 30px;
+}
+main #user-card-wrap .user-info-title {
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+}
+main #user-card-wrap .secondary-info {
+  margin: 0;
+  padding: 0;
+}
+main #user-card-wrap .address-wrap {
+  display: flex;
+  flex-direction: column;
+}
+main #user-card-wrap .address-wrap .geo-data {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-left: 10px;
 }/*# sourceMappingURL=style.css.map */
