@@ -1,0 +1,74 @@
+$base-color: #636365;
+$bottom-color: #101010;
+$table-color: #ffffff33;
+$border-color: #292929;
+$title-line-color: hsl(0, 0%, 30%);
+$light-line-color: hsl(0, 0%, 70%);
+$dark-line-color: hsl(0, 0%, 60%);
+$adjusted-white: hsl(0, 0%, 90%);
+
+body {
+    min-height: 1200px;
+    background: rgb(99, 99, 101);
+    background: linear-gradient(180deg, $base-color, $base-color, $bottom-color 100%);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+
+    #users-wrap {
+        min-width: 80%;
+        max-width: 800px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        background-color: $table-color;
+        border-radius: 10px;
+        border: solid 2px $border-color;
+
+        .title-line {
+            font-weight: 800;
+            text-align: center;
+
+            span {
+                color: $adjusted-white;
+            }
+        }
+
+        .table-line {
+            width: 100%;
+            display: flex;
+            text-decoration: none;
+            color: black;
+
+            .user-list-span {
+                display: block;
+                width: 33%;
+                padding: 5px 20px 5px 20px;
+            }
+        }
+
+        .table-line:nth-child(odd) {
+            background-color: $dark-line-color;
+        }
+
+        .table-line:nth-child(even) {
+            background-color: $light-line-color;
+        }
+
+        .table-line:first-child {
+            border-radius: 7px 7px 0 0;
+            background-color: $title-line-color;
+        }
+
+        .table-line:last-child {
+            border-radius: 0 0 7px 7px;
+        }
+    }
+}
