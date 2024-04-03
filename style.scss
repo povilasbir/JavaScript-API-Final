@@ -6,11 +6,54 @@ $title-line-color: hsl(0, 0%, 30%);
 $light-line-color: hsl(0, 0%, 70%);
 $dark-line-color: hsl(0, 0%, 60%);
 $adjusted-white: hsl(0, 0%, 90%);
+$reading-white: hsl(0, 0%, 75%);
 
 body {
+    font-family: "Montserrat", sans-serif;
     min-height: 1200px;
     background: rgb(99, 99, 101);
     background: linear-gradient(180deg, $base-color, $base-color, $bottom-color 100%);
+
+    .index-main {
+        margin-top: 50px;
+    }
+
+    .main-button {
+        margin-top: 15px;
+        padding: 20px;
+        border: solid 2px $border-color;
+        border-radius: 10px;
+        background-color: $dark-line-color;
+        min-width: 350px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 30px;
+        color: $adjusted-white;
+    }
+
+
+}
+
+#sticky-menu {
+    position: sticky;
+    top: 10px;
+    background-color: $dark-line-color;
+    border: solid 2px $border-color;
+    width: 70px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .index-button {
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        color: $adjusted-white;
+        text-decoration: none;
+    }
 }
 
 header {
@@ -20,9 +63,53 @@ header {
 
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
-    #users-wrap {
+    #user-post-title {
+        color: $adjusted-white;
+        font-weight: 600;
+        font-size: 25px;
+        margin-top: 60px;
+        margin-bottom: 0px;
+        width: 100%;
+        background: rgb(99, 99, 101);
+        background: linear-gradient(90deg, rgba(99, 99, 101, 1) 35%, rgba(139, 0, 0, 1) 50%, rgba(99, 99, 101, 1) 65%);
+        text-align: center;
+    }
+
+    #post-wrap {
+        min-width: 60%;
+        margin-top: 30px;
+        background-color: $table-color;
+        border-radius: 10px;
+        border: solid 2px $border-color;
+        padding: 20px;
+
+        #post-title {
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        #post-username {
+            color: darkred;
+            text-decoration: underline;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        #post-content {
+            background-color: $reading-white;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 0;
+            text-wrap: wrap;
+        }
+    }
+
+    .users-wrap {
         min-width: 80%;
         max-width: 800px;
         margin-top: 30px;
@@ -70,6 +157,12 @@ main {
         border: solid 2px $border-color;
         border-radius: 10px;
         padding: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        .profile-img {
+            width: 300px;
+        }
 
         .user-info-title {
             font-weight: 800;

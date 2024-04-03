@@ -4,11 +4,11 @@ export async function getJson(source) {
     return json
 }
 
-export function createListElement(arr, parent, dataStart, dataEnd) {
+export function createListElement(arr, parent, dataStart, dataEnd, hyperlinkSnippet) {
     arr.forEach(item => {
         const tableLine = document.createElement('a')
         tableLine.classList.add('table-line')
-        tableLine.setAttribute('href', './user.html')
+        tableLine.setAttribute('href', './' + hyperlinkSnippet + '.html?id=' + item.id)
 
         const keyArray = Object.keys(item)
         for (let i = dataStart; i <= dataEnd; i++) {

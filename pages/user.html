@@ -6,40 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Info</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <div id="sticky-menu">
+        <a href="index.html" class="index-button">
+            Main
+        </a>
+    </div>
     <header>
         <img src="../banner.png" alt="Banner Image">
     </header>
     <main>
         <div id="user-card-wrap">
-            <h2 class="user-info-title">User Information</h2>
-            <h3 class="username" id="username">Username: Loading...</h3>
-            <h4 class="secondary-info" id="full-name">Full Name: Loading...</h4>
-            <h4 class="secondary-info" id="email">Email: Loading...</h4>
-            <h5 class="address-title">Address Information:</h5>
-            <div class="address-wrap">
-                <span class="address-secondary" id="street">
-                    Street: Loading...
-                </span>
-                <span class="address-secondary" id="suite">
-                    Suite: Loading...
-                </span>
-                <span class="address-secondary" id="city">
-                    City: Loading...
-                </span>
-                <span class="address-secondary" id="zipcode">
-                    Zip Code: Loading...
-                </span>
-                <div class="geo-data">
-                    <span class="lat">
-                        Latitude: Loading...
+            <div>
+                <h2 class="user-info-title">User Information</h2>
+                <h3 class="username" id="username">Username: Loading...</h3>
+                <h4 class="secondary-info" id="full-name">Full Name: Loading...</h4>
+                <h4 class="secondary-info" id="email">Email: Loading...</h4>
+                <h5 class="address-title">Address Information:</h5>
+                <div class="address-wrap">
+                    <span class="address-secondary" id="street">
+                        Street: Loading...
                     </span>
-                    <span class="lng">
-                        Longitude: Loading...
+                    <span class="address-secondary" id="suite">
+                        Suite: Loading...
                     </span>
+                    <span class="address-secondary" id="city">
+                        City: Loading...
+                    </span>
+                    <span class="address-secondary" id="zipcode">
+                        Zip Code: Loading...
+                    </span>
+                    <div class="geo-data">
+                        <span class="latlng" id="lat">
+                            Latitude: Loading...
+                        </span>
+                        <span class="lnglng" id="lng">
+                            Longitude: Loading...
+                        </span>
+                    </div>
                 </div>
+            </div>
+            <img src="../profile.webp" alt="Profile Image" class="profile-img">
+        </div>
+        <div class="users-wrap" id="user-posts-wrap">
+            <div class="table-line title-line">
+                <span class="user-list-span">
+                    Post Title
+                </span>
+                <span class="user-list-span">
+                    Post
+                </span>
             </div>
         </div>
     </main>

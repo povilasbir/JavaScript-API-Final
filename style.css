@@ -1,7 +1,44 @@
 body {
+  font-family: "Montserrat", sans-serif;
   min-height: 1200px;
   background: rgb(99, 99, 101);
   background: linear-gradient(180deg, #636365, #636365, #101010 100%);
+}
+body .index-main {
+  margin-top: 50px;
+}
+body .main-button {
+  margin-top: 15px;
+  padding: 20px;
+  border: solid 2px #292929;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 60%);
+  min-width: 350px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 30px;
+  color: hsl(0, 0%, 90%);
+}
+
+#sticky-menu {
+  position: sticky;
+  top: 10px;
+  background-color: hsl(0, 0%, 60%);
+  border: solid 2px #292929;
+  width: 70px;
+  height: 50px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sticky-menu .index-button {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: hsl(0, 0%, 90%);
+  text-decoration: none;
 }
 
 header {
@@ -11,9 +48,48 @@ header {
 
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-main #users-wrap {
+main #user-post-title {
+  color: hsl(0, 0%, 90%);
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: 60px;
+  margin-bottom: 0px;
+  width: 100%;
+  background: rgb(99, 99, 101);
+  background: linear-gradient(90deg, rgb(99, 99, 101) 35%, rgb(139, 0, 0) 50%, rgb(99, 99, 101) 65%);
+  text-align: center;
+}
+main #post-wrap {
+  min-width: 60%;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: solid 2px #292929;
+  padding: 20px;
+}
+main #post-wrap #post-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+main #post-wrap #post-username {
+  color: darkred;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 15px;
+}
+main #post-wrap #post-content {
+  background-color: hsl(0, 0%, 75%);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 0;
+  text-wrap: wrap;
+}
+main .users-wrap {
   min-width: 80%;
   max-width: 800px;
   margin-top: 30px;
@@ -23,29 +99,29 @@ main #users-wrap {
   border-radius: 10px;
   border: solid 2px #292929;
 }
-main #users-wrap .table-line {
+main .users-wrap .table-line {
   display: flex;
   text-decoration: none;
   color: black;
 }
-main #users-wrap .table-line .user-list-span {
+main .users-wrap .table-line .user-list-span {
   min-width: 33%;
   padding: 5px 20px 5px 20px;
 }
-main #users-wrap .table-line:nth-child(odd) {
+main .users-wrap .table-line:nth-child(odd) {
   background-color: hsl(0, 0%, 60%);
 }
-main #users-wrap .table-line:nth-child(even) {
+main .users-wrap .table-line:nth-child(even) {
   background-color: hsl(0, 0%, 70%);
 }
-main #users-wrap .table-line:first-child {
+main .users-wrap .table-line:first-child {
   border-radius: 7px 7px 0 0;
   background-color: hsl(0, 0%, 30%);
   color: hsl(0, 0%, 90%);
   font-weight: 800;
   text-align: center;
 }
-main #users-wrap .table-line:last-child {
+main .users-wrap .table-line:last-child {
   border-radius: 0 0 7px 7px;
 }
 main #user-card-wrap {
@@ -54,6 +130,11 @@ main #user-card-wrap {
   border: solid 2px #292929;
   border-radius: 10px;
   padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+main #user-card-wrap .profile-img {
+  width: 300px;
 }
 main #user-card-wrap .user-info-title {
   font-weight: 800;
